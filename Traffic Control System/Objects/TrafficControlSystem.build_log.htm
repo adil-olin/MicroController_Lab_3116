@@ -1,0 +1,269 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Afser Adil Olin, University of Dahaka, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+G:\CODING\Junior training\LAB\MicroController Lab\Lab2\Traffic Control System\TrafficControlSystem.uvprojx
+Project File Date:  02/08/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(5): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+main.c(6): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+main.c(11): warning: // comments are not allowed in this language [-Wcomment]
+//Taking up and down cars in GPIOA pins
+^
+main.c(41): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int get_random() //random number generator function
+              ^
+               void
+main.c(41): warning: no previous prototype for function 'get_random' [-Wmissing-prototypes]
+int get_random() //random number generator function
+    ^
+main.c(41): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int get_random() //random number generator function
+^
+static 
+main.c(126): warning: no previous prototype for function 'up_down_traffic_load' [-Wmissing-prototypes]
+int up_down_traffic_load(void) //check the traffic load of up down road
+    ^
+main.c(126): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int up_down_traffic_load(void) //check the traffic load of up down road
+^
+static 
+main.c(156): warning: no previous prototype for function 'left_right_traffic_load' [-Wmissing-prototypes]
+int left_right_traffic_load(void) //check the traffic load of left right road
+    ^
+main.c(156): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int left_right_traffic_load(void) //check the traffic load of left right road
+^
+static 
+main.c(185): warning: no previous prototype for function 'update_cars' [-Wmissing-prototypes]
+void update_cars(int now) //move all the car according to the traffic light
+     ^
+main.c(185): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void update_cars(int now) //move all the car according to the traffic light
+^
+static 
+main.c(264): warning: no previous prototype for function 'init_lights' [-Wmissing-prototypes]
+void init_lights(void) // initially put a green light on left to right road and red light to up to down road
+     ^
+main.c(264): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_lights(void) // initially put a green light on left to right road and red light to up to down road
+^
+static 
+main.c(270): warning: no previous prototype for function 'init_cars' [-Wmissing-prototypes]
+void init_cars(void) // randomly initialize some car to the road
+     ^
+main.c(270): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_cars(void) // randomly initialize some car to the road
+^
+static 
+main.c(309): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        GPIO_InitTypeDef LRlight_cars,UDlight_cars,Traffic_lights;
+                         ^
+main.c(283): warning: no previous prototype for function 'init_pins' [-Wmissing-prototypes]
+void init_pins(void) //initialize all the pin numbers and turn on the necessary pins
+     ^
+main.c(283): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_pins(void) //initialize all the pin numbers and turn on the necessary pins
+^
+static 
+main.c(345): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOB,(uint16_t)Left_car[i],left_car[i]);
+                ~~~~~~~~~~~~~                             ^~~~~~~~~~~
+main.c(346): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOB,(uint16_t)Right_car[i],right_car[i]);
+                ~~~~~~~~~~~~~                              ^~~~~~~~~~~~
+main.c(347): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOA,(uint16_t)Upper_car[i],upper_car[i]);
+                ~~~~~~~~~~~~~                              ^~~~~~~~~~~~
+main.c(348): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOA,(uint16_t)Lower_car[i],lower_car[i]);
+                ~~~~~~~~~~~~~                              ^~~~~~~~~~~~
+main.c(349): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOC,(uint16_t)Up_Down_Lights[i],up_down_lights[i]);
+                ~~~~~~~~~~~~~                                   ^~~~~~~~~~~~~~~~~
+main.c(350): warning: implicit conversion loses integer precision: 'int' to 'GPIO_PinState' [-Wimplicit-int-conversion]
+                GPIO_WritePin(GPIOC,(uint16_t)Left_Right_Lights[i],left_right_lights[i]);
+                ~~~~~~~~~~~~~                                      ^~~~~~~~~~~~~~~~~~~~
+main.c(340): warning: no previous prototype for function 'turn_on_the_lights' [-Wmissing-prototypes]
+void turn_on_the_lights(void) //handy function that will turn on all the lights at it's need
+     ^
+main.c(340): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turn_on_the_lights(void) //handy function that will turn on all the lights at it's need
+^
+static 
+main.c(356): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+main.c(464): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(368): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int now = 1;
+            ^
+main.c(463): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(14): warning: no previous extern declaration for non-static variable 'Upper_car' [-Wmissing-variable-declarations]
+int Upper_car[4];
+    ^
+main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Upper_car[4];
+^
+main.c(17): warning: no previous extern declaration for non-static variable 'Lower_car' [-Wmissing-variable-declarations]
+int Lower_car[4];
+    ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Lower_car[4];
+^
+main.c(23): warning: no previous extern declaration for non-static variable 'Right_car' [-Wmissing-variable-declarations]
+int Right_car[4];
+    ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Right_car[4];
+^
+main.c(26): warning: no previous extern declaration for non-static variable 'Left_car' [-Wmissing-variable-declarations]
+int Left_car[4];
+    ^
+main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Left_car[4];
+^
+main.c(29): warning: no previous extern declaration for non-static variable 'Left_Right_Lights' [-Wmissing-variable-declarations]
+int Left_Right_Lights[4];
+    ^
+main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Left_Right_Lights[4];
+^
+main.c(33): warning: no previous extern declaration for non-static variable 'Up_Down_Lights' [-Wmissing-variable-declarations]
+int Up_Down_Lights[4];
+    ^
+main.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int Up_Down_Lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'upper_car' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+    ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'lower_car' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+                 ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'right_car' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+                              ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'left_car' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+                                           ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'up_down_lights' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+                                                       ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'left_right_lights' [-Wmissing-variable-declarations]
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+                                                                         ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int upper_car[4],lower_car[4],right_car[4],left_car[4],up_down_lights[4],left_right_lights[4];
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'UPPER_CAR_FROM_PIN' [-Wmissing-variable-declarations]
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+    ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'LOWER_CAR_FROM_PIN' [-Wmissing-variable-declarations]
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+                          ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'RIGHT_CAR_FROM_PIN' [-Wmissing-variable-declarations]
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+                                                ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'LEFT_CAR_FROM_PIN' [-Wmissing-variable-declarations]
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+                                                                      ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int UPPER_CAR_FROM_PIN[4],LOWER_CAR_FROM_PIN[4],RIGHT_CAR_FROM_PIN[4],LEFT_CAR_FROM_PIN[4];
+^
+39 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=3720 RO-data=468 RW-data=0 ZI-data=2056  
+".\Objects\TrafficControlSystem.axf" - 0 Error(s), 39 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/olina/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/olina/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
